@@ -3,11 +3,50 @@
 }
     <html>
     <head>
-
-        <link rel="stylesheet" href="~/css/Style.css" />
+        <link href="~/Content/Login.css" rel="stylesheet" />
     </head>
-
     <body>
+
+        <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+            <div class="element-minimalism-login">
+                <div class="div">
+                    <img class="rectangle" src="~/img/Rectangle 4.png" />
+                    <div class="group">
+                        <div class="text-wrapper">Welcome</div>
+
+                    </div>
+
+                    <div class="overlap-wrapper">
+                        <div class="overlap">
+                            <input type="password" class="element-minimalism-login text-wrapper-3" name="passcode" value="" placeholder="Password" required>
+                            @*<div class="text-wrapper-3">
+                                <input />
+                            </div>*@
+                            <img class="frame" src="~/img/frame.svg" />
+
+                        </div>
+                    </div>
+                    <div class="div-wrapper">
+                        <div class="overlap">
+                            <div name="username" class="element-minimalism-login text-wrapper-3" value="" placeholder="Username" required>
+                            <img class="frame" src="~/img/name.svg" />
+                        </div>
+                    </div>
+                    <div class="group-2">
+                        <div class="overlap-2"><div type="submit" style="  position: absolute;   top: 17px;   left: 166px;  font-family: " Poppins-Bold", Helvetica; font-weight: 700; color: #ffffff; font-size: 12px; letter-spacing: 0; line-height: normal;" name="commit" value="Login"></div>
+                    </div>
+
+                    <img class="vector" src="~/img/vector.svg" />
+                </div>
+
+            </div>
+
+
+            @ViewBag.username
+        </form>
+    </body>
+
+    @*<body>
         <div class="login">
             <h1>Login to Web App</h1>
 
@@ -25,5 +64,5 @@
                 @ViewBag.username
             </form>
         </div>
-    </body>
+    </body>*@
     </html>
