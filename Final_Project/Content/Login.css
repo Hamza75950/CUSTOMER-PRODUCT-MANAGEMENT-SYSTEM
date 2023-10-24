@@ -126,7 +126,7 @@
     border-radius: 13px;
 }
 
-.element-minimalism-login .text-wrapper-3{
+.element-minimalism-login .text-wrapper-3 {
     position: absolute;
     top: 17px;
     left: 48px;
@@ -137,6 +137,8 @@
     letter-spacing: 0;
     line-height: normal;
 }
+
+
 
 .element-minimalism-login .frame {
     position: absolute;

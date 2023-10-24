@@ -1,0 +1,2102 @@
+﻿.dashboard {
+    background-color: #ebdfd7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+    .dashboard .div {
+        background-color: #ebdfd7;
+        width: 1440px;
+        height: 1080px;
+        position: relative;
+    }
+
+    .dashboard .group {
+        position: absolute;
+        width: 428px;
+        height: 291px;
+        top: 773px;
+        left: 1010px;
+    }
+
+    .dashboard .overlap-group {
+        position: relative;
+        width: 400px;
+        height: 291px;
+        background-color: #ffffff57;
+        border-radius: 14px;
+    }
+
+    .dashboard .ellipse {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        left: 17px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 191px;
+        left: 17px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .overlap {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 161px;
+        left: 17px;
+        border-radius: 15px;
+    }
+
+    .dashboard .ellipse-3 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+        background-color: #060606;
+        border-radius: 15px;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .text-wrapper {
+        position: absolute;
+        height: 16px;
+        top: 7px;
+        left: 7px;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .ellipse-4 {
+        left: 73px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-5 {
+        left: 73px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 191px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-6 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 161px;
+        left: 73px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .overlap-2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 131px;
+        left: 73px;
+        border-radius: 15px;
+    }
+
+    .dashboard .text-wrapper-2 {
+        position: absolute;
+        height: 16px;
+        top: 7px;
+        left: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .overlap-3 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        left: 129px;
+        border-radius: 15px;
+    }
+
+    .dashboard .text-wrapper-3 {
+        position: absolute;
+        height: 16px;
+        top: 7px;
+        left: 6px;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .ellipse-7 {
+        left: 185px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-8 {
+        left: 185px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 191px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-9 {
+        left: 185px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 161px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-10 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 131px;
+        left: 185px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-11 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 101px;
+        left: 185px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .overlap-4 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 71px;
+        left: 185px;
+        border-radius: 15px;
+    }
+
+    .dashboard .ellipse-12 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+        background-color: #e65f2b;
+        border-radius: 15px;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .text-wrapper-4 {
+        position: absolute;
+        height: 16px;
+        top: 7px;
+        left: 8px;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .ellipse-13 {
+        left: 241px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-14 {
+        left: 241px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 191px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .ellipse-15 {
+        left: 241px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 161px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .overlap-5 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 131px;
+        left: 241px;
+        border-radius: 15px;
+    }
+
+    .dashboard .overlap-6 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        left: 297px;
+        border-radius: 15px;
+    }
+
+    .dashboard .ellipse-16 {
+        left: 353px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 221px;
+        border-radius: 15px;
+        border: 1px solid;
+        border-color: #060606;
+        transform: rotate(180deg);
+    }
+
+    .dashboard .overlap-7 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top: 191px;
+        left: 353px;
+        border-radius: 15px;
+    }
+
+    .dashboard .text-wrapper-5 {
+        position: absolute;
+        width: 26px;
+        height: 14px;
+        top: 261px;
+        left: 19px;
+        color: #797979;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.12px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-6 {
+        position: absolute;
+        width: 34px;
+        height: 14px;
+        top: 261px;
+        left: 71px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.12px;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-7 {
+        position: absolute;
+        height: 14px;
+        top: 261px;
+        left: 133px;
+        color: #797979;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        white-space: nowrap;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-8 {
+        position: absolute;
+        height: 14px;
+        top: 261px;
+        left: 182px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-9 {
+        position: absolute;
+        width: 30px;
+        height: 14px;
+        top: 261px;
+        left: 241px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.12px;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-10 {
+        position: absolute;
+        width: 32px;
+        height: 14px;
+        top: 261px;
+        left: 296px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.12px;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-11 {
+        position: absolute;
+        width: 32px;
+        height: 14px;
+        top: 261px;
+        left: 352px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.12px;
+        line-height: normal;
+    }
+
+    .dashboard .frame {
+        display: inline-flex;
+        align-items: center;
+        gap: 88px;
+        position: absolute;
+        top: 18px;
+        left: 18px;
+    }
+
+    .dashboard .text-wrapper-12 {
+        -webkit-text-stroke: 0.5px #060606;
+        color: #060606;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        position: relative;
+        width: fit-content;
+        margin-left: -1px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .frame-wrapper {
+        display: inline-flex;
+        height: 34px;
+        align-items: center;
+        gap: 10px;
+        padding: 2px 14px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #ffffff;
+        border-radius: 17px;
+    }
+
+    .dashboard .frame-2 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .text-wrapper-13 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .icons {
+        position: relative;
+        width: 14px;
+        height: 14px;
+    }
+
+    .dashboard .overlap-8 {
+        position: absolute;
+        width: 260px;
+        height: 1080px;
+        top: 0;
+        left: 0;
+    }
+
+    .dashboard .menu {
+        display: inline-flex;
+        flex-direction: column;
+        height: 1080px;
+        align-items: center;
+        gap: 60px;
+        padding: 140px 46px 0px 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #060606;
+    }
+
+    .dashboard .button {
+        display: flex;
+        width: 184px;
+        height: 48px;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 20px 5px 7px;
+        position: relative;
+        background-color: #ffffff;
+        border-radius: 24px;
+        all: unset;
+        box-sizing: border-box;
+    }
+
+    .dashboard .icons-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 5px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #e65f2b;
+        border-radius: 24px;
+    }
+
+    .dashboard .img {
+        position: relative;
+        width: 24px;
+        height: 24px;
+    }
+
+    .dashboard .create-new-project {
+        position: relative;
+        width: fit-content;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #171717;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .dashboard .frame-3 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .expand-tab {
+        display: flex;
+        width: 184px;
+        align-items: center;
+        gap: 16px;
+        padding: 13px 26px 13px 16px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #ffffff;
+        border-radius: 24px;
+    }
+
+    .dashboard .icons-2 {
+        position: relative;
+        width: 22px;
+        height: 22px;
+    }
+
+    .dashboard .text-wrapper-14 {
+        width: fit-content;
+        color: #e65f2b;
+        font-size: 14px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .expand-tab-2 {
+        display: flex;
+        width: 160px;
+        align-items: center;
+        gap: 16px;
+        padding: 13px 26px 13px 16px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .text-wrapper-15 {
+        width: fit-content;
+        color: #f1f1f1;
+        font-size: 14px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-16 {
+        width: fit-content;
+        margin-right: -16px;
+        color: #f1f1f1;
+        font-size: 14px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-17 {
+        width: fit-content;
+        margin-right: -23px;
+        color: #f1f1f1;
+        font-size: 14px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-18 {
+        width: fit-content;
+        margin-right: -9px;
+        color: #f1f1f1;
+        font-size: 14px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .img-wrapper {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 8px;
+        position: absolute;
+        top: 30px;
+        left: 245px;
+        background-color: #ffffff;
+        border-radius: 17px;
+        box-shadow: 2px 2px 8px #0000001a;
+    }
+
+    .dashboard .frame-4 {
+        display: flex;
+        width: 48px;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px;
+        position: absolute;
+        top: 1002px;
+        left: 30px;
+        background-color: #e65f2b;
+        border-radius: 48px;
+        box-shadow: 0px 8px 15px #130f391f;
+    }
+
+    .dashboard .icons-3 {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        margin-top: -3px;
+        margin-bottom: -3px;
+        margin-left: -3px;
+        margin-right: -3px;
+    }
+
+    .dashboard .group-2 {
+        position: absolute;
+        width: 142px;
+        height: 35px;
+        top: 30px;
+        left: 28px;
+    }
+
+    .dashboard .vector {
+        position: absolute;
+        width: 1180px;
+        height: 1px;
+        top: 94px;
+        left: 260px;
+        object-fit: cover;
+    }
+
+    .dashboard .frame-5 {
+        display: flex;
+        width: 1120px;
+        align-items: center;
+        position: absolute;
+        top: 23px;
+        left: 290px;
+    }
+
+    .dashboard .text-wrapper-19 {
+        width: 521px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        color: #000606;
+        font-size: 32px;
+        letter-spacing: 0.16px;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .frame-6 {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        flex: 1;
+        flex-grow: 1;
+    }
+
+    .dashboard .frame-7 {
+        position: relative;
+        flex: 1;
+        flex-grow: 1;
+        height: 60px;
+        margin-top: -2px;
+        margin-bottom: -10px;
+        margin-left: -6px;
+    }
+
+    .dashboard .div-wrapper {
+        display: inline-flex;
+        flex-direction: column;
+        height: 48px;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        padding: 13px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #ffffff;
+        border-radius: 55px;
+        box-shadow: 0px 4px 6px #00000005;
+    }
+
+    .dashboard .frame-8 {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        position: relative;
+        align-self: stretch;
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-9 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 20px 5px 5px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #ffffff;
+        border-radius: 24px;
+    }
+
+    .dashboard .ellipse-17 {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin-top: -2px;
+        margin-bottom: -10px;
+        margin-left: -6px;
+    }
+
+    .dashboard .frame-10 {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-11 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .text-wrapper-20 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        color: #292d32;
+        font-size: 14px;
+        letter-spacing: 0;
+        white-space: nowrap;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .text-wrapper-21 {
+        position: relative;
+        width: fit-content;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #292d3270;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .frame-12 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        position: absolute;
+        top: 114px;
+        left: 290px;
+    }
+
+    .dashboard .frame-13 {
+        display: flex;
+        width: 1120px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .text-wrapper-22 {
+        position: relative;
+        width: fit-content;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 22px;
+        letter-spacing: 0.22px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .frame-14 {
+        display: inline-flex;
+        gap: 12px;
+        flex: 0 0 auto;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard .frame-15 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-16 {
+        display: flex;
+        flex-direction: column;
+        width: 268px;
+        height: 196px;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 18px 43px 24px 18px;
+        position: relative;
+        background-color: #ffffff57;
+        border-radius: 14px;
+    }
+
+    .dashboard .frame-17 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 10px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-18 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-19 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #d397e6;
+        border-radius: 26px;
+    }
+
+    .dashboard .vuesax-linear-chart {
+        position: relative;
+        width: 20px;
+        height: 22px;
+        left: 1px;
+        background-image: url(./img/component-5.svg);
+        background-size: 100% 100%;
+    }
+
+    .dashboard .text-wrapper-23 {
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.2px #797979;
+        position: relative;
+        width: fit-content;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-24 {
+        position: relative;
+        width: fit-content;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 28px;
+        letter-spacing: 0.28px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .frame-20 {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-21 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .p {
+        position: relative;
+        width: 156px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        line-height: 12px;
+    }
+
+    .dashboard .frame-22 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #e79170;
+        border-radius: 26px;
+    }
+
+    .dashboard .div-2 {
+        position: relative;
+        width: fit-content;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 28px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .span {
+        letter-spacing: 0.28px;
+    }
+
+    .dashboard .text-wrapper-25 {
+        font-size: 16px;
+        letter-spacing: 0.64px;
+    }
+
+    .dashboard .text-wrapper-26 {
+        position: relative;
+        width: 163px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        line-height: 12px;
+    }
+
+    .dashboard .frame-23 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #6fa0e5;
+        border-radius: 26px;
+    }
+
+    .dashboard .text-wrapper-27 {
+        position: relative;
+        width: 151px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        line-height: 12px;
+    }
+
+    .dashboard .frame-24 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        position: relative;
+        flex: 0 0 auto;
+        background-color: #f0c274;
+        border-radius: 26px;
+    }
+
+    .dashboard .frame-25 {
+        display: inline-flex;
+        flex-direction: column;
+        height: 349px;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 18px 18px 10px;
+        position: absolute;
+        top: 394px;
+        left: 290px;
+        background-color: #ffffff57;
+        border-radius: 14px;
+    }
+
+    .dashboard .frame-26 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-27 {
+        display: flex;
+        width: 654px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-28 {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .group-3 {
+        position: relative;
+        width: 664px;
+        height: 16px;
+        margin-right: -10px;
+    }
+
+    .dashboard .text-wrapper-28 {
+        left: -1px;
+        position: absolute;
+        height: 16px;
+        top: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-29 {
+        position: absolute;
+        height: 16px;
+        top: -1px;
+        left: 240px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-30 {
+        position: absolute;
+        height: 16px;
+        top: -1px;
+        left: 386px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-31 {
+        position: absolute;
+        height: 16px;
+        top: -1px;
+        left: 490px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-32 {
+        left: 597px;
+        position: absolute;
+        height: 16px;
+        top: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .vector-2 {
+        position: relative;
+        width: 654px;
+        height: 1px;
+        margin-bottom: -0.5px;
+        object-fit: cover;
+    }
+
+    .dashboard .group-4 {
+        position: relative;
+        width: 642px;
+        height: 208px;
+    }
+
+    .dashboard .group-5 {
+        position: absolute;
+        width: 648px;
+        height: 32px;
+        top: 0;
+        left: 0;
+    }
+
+    .dashboard .text-wrapper-33 {
+        position: absolute;
+        height: 16px;
+        top: 8px;
+        left: 0;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-34 {
+        position: absolute;
+        height: 16px;
+        top: 8px;
+        left: 241px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-35 {
+        position: absolute;
+        height: 16px;
+        top: 8px;
+        left: 387px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .frame-29 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 4px;
+        left: 491px;
+        background-color: #1a922d2e;
+        border-radius: 20px;
+    }
+
+    .dashboard .text-wrapper-36 {
+        width: fit-content;
+        margin-top: -1px;
+        color: #1a922d;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        white-space: nowrap;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .overlap-group-wrapper {
+        position: absolute;
+        width: 34px;
+        height: 32px;
+        top: 0;
+        left: 610px;
+    }
+
+    .dashboard .overlap-group-2 {
+        position: relative;
+        width: 32px;
+        height: 32px;
+    }
+
+    .dashboard .ellipse-wrapper {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+        background-image: url(./img/ellipse-3227.svg);
+        background-size: 100% 100%;
+    }
+
+    .dashboard .ellipse-18 {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+    }
+
+    .dashboard .text-wrapper-37 {
+        position: absolute;
+        width: 22px;
+        height: 10px;
+        top: 10px;
+        left: 4px;
+        -webkit-text-stroke: 0.2px #060606;
+        font-size: 9px;
+        text-align: center;
+        letter-spacing: -0.18px;
+        line-height: 10px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+    }
+
+    .dashboard .group-6 {
+        position: absolute;
+        width: 648px;
+        height: 32px;
+        top: 44px;
+        left: 0;
+    }
+
+    .dashboard .frame-30 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 4px;
+        left: 491px;
+        background-color: #e2b1322e;
+        border-radius: 20px;
+    }
+
+    .dashboard .text-wrapper-38 {
+        margin-top: -1px;
+        color: #dfa50f;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        position: relative;
+        width: fit-content;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .group-7 {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+        background-image: url(./img/ellipse-3229-2.svg);
+        background-size: 100% 100%;
+    }
+
+    .dashboard .ellipse-19 {
+        position: absolute;
+        width: 16px;
+        height: 25px;
+        top: 0;
+        left: 16px;
+    }
+
+    .dashboard .text-wrapper-39 {
+        position: absolute;
+        height: 10px;
+        top: 10px;
+        left: 6px;
+        -webkit-text-stroke: 0.2px #060606;
+        font-size: 9px;
+        text-align: center;
+        letter-spacing: -0.18px;
+        line-height: 10px;
+        white-space: nowrap;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+    }
+
+    .dashboard .group-8 {
+        position: absolute;
+        width: 648px;
+        height: 32px;
+        top: 88px;
+        left: 0;
+    }
+
+    .dashboard .frame-31 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 4px;
+        left: 491px;
+        background-color: #ee1f1b2e;
+        border-radius: 20px;
+    }
+
+    .dashboard .text-wrapper-40 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #ee1f1b;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .group-9 {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+        background-image: url(./img/ellipse-3231.svg);
+        background-size: 100% 100%;
+    }
+
+    .dashboard .ellipse-20 {
+        position: absolute;
+        width: 31px;
+        height: 28px;
+        top: 4px;
+        left: 1px;
+    }
+
+    .dashboard .text-wrapper-41 {
+        position: absolute;
+        width: 20px;
+        height: 10px;
+        top: 10px;
+        left: 5px;
+        -webkit-text-stroke: 0.2px #060606;
+        font-size: 9px;
+        text-align: center;
+        letter-spacing: -0.18px;
+        line-height: 10px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+    }
+
+    .dashboard .group-10 {
+        position: absolute;
+        width: 648px;
+        height: 32px;
+        top: 132px;
+        left: 0;
+    }
+
+    .dashboard .overlap-group-3 {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        background-image: url(./img/ellipse-3229.svg);
+        background-size: 100% 100%;
+    }
+
+    .dashboard .group-11 {
+        position: absolute;
+        width: 648px;
+        height: 32px;
+        top: 176px;
+        left: 0;
+    }
+
+    .dashboard .frame-32 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 4px;
+        left: 491px;
+        background-color: #e65f2b2e;
+        border-radius: 20px;
+    }
+
+    .dashboard .text-wrapper-42 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #e65f2b;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .group-12 {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        left: 0;
+        background-image: url(./img/ellipse-3233.svg);
+        background-size: 100% 100%;
+    }
+
+    .dashboard .ellipse-21 {
+        position: absolute;
+        width: 18px;
+        height: 32px;
+        top: 0;
+        left: 14px;
+    }
+
+    .dashboard .frame-33 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 18px;
+        position: absolute;
+        top: 394px;
+        left: 1010px;
+        background-color: #ffffff57;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .dashboard .frame-34 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-35 {
+        display: flex;
+        width: 364px;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .div-3 {
+        position: relative;
+        width: 347px;
+        height: 178px;
+    }
+
+    .dashboard .overlap-9 {
+        position: relative;
+        width: 355px;
+        height: 323px;
+    }
+
+    .dashboard .group-13 {
+        position: absolute;
+        width: 355px;
+        height: 323px;
+        top: 0;
+        left: 0;
+    }
+
+    .dashboard .ellipse-22 {
+        position: absolute;
+        width: 298px;
+        height: 149px;
+        top: 25px;
+        left: 24px;
+    }
+
+    .dashboard .ellipse-23 {
+        position: absolute;
+        width: 77px;
+        height: 126px;
+        top: 48px;
+        left: 24px;
+    }
+
+    .dashboard .layer {
+        position: absolute;
+        width: 345px;
+        height: 167px;
+        top: 0;
+        left: 0;
+    }
+
+    .dashboard .text-wrapper-43 {
+        position: absolute;
+        height: 14px;
+        top: 164px;
+        left: 3px;
+        transform: rotate(-90deg);
+        color: #000000;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-44 {
+        position: absolute;
+        height: 14px;
+        top: 164px;
+        left: 328px;
+        color: #000000;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-45 {
+        position: absolute;
+        height: 14px;
+        top: 26px;
+        left: 78px;
+        transform: rotate(-31.01deg);
+        color: #000000;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-46 {
+        position: absolute;
+        height: 14px;
+        top: 32px;
+        left: 262px;
+        transform: rotate(31deg);
+        color: #000000;
+        font-size: 12px;
+        letter-spacing: 0.12px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .ellipse-24 {
+        position: absolute;
+        width: 146px;
+        height: 40px;
+        top: 21px;
+        left: 88px;
+    }
+
+    .dashboard .ellipse-25 {
+        position: absolute;
+        width: 101px;
+        height: 117px;
+        top: 33px;
+        left: 219px;
+    }
+
+    .dashboard .frame-36 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        position: absolute;
+        top: 100px;
+        left: 137px;
+    }
+
+    .dashboard .text-wrapper-47 {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-size: 28px;
+        letter-spacing: 0.28px;
+        line-height: normal;
+        white-space: nowrap;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+    }
+
+    .dashboard .text-wrapper-48 {
+        width: 72px;
+        color: #9a9a9a;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        position: relative;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .dashboard .frame-37 {
+        display: flex;
+        width: 364px;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .frame-38 {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        position: relative;
+        flex: 0 0 auto;
+    }
+
+    .dashboard .text-wrapper-49 {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #060606;
+        color: #060606;
+        font-size: 22px;
+        letter-spacing: 0.22px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-50 {
+        position: relative;
+        width: fit-content;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #797979;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-51 {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #1a922d;
+        color: #1a922d;
+        font-size: 22px;
+        letter-spacing: 0.22px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-52 {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #dfa510;
+        color: #dfa510;
+        font-size: 22px;
+        letter-spacing: 0.22px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-53 {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.5px #e65f2b;
+        color: #e65f2b;
+        font-size: 22px;
+        letter-spacing: 0.22px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .overlap-wrapper {
+        position: absolute;
+        width: 692px;
+        height: 291px;
+        top: 773px;
+        left: 290px;
+    }
+
+    .dashboard .overlap-10 {
+        position: relative;
+        width: 690px;
+        height: 291px;
+        background-color: #ffffff57;
+        border-radius: 14px;
+    }
+
+    .dashboard .text-wrapper-54 {
+        position: absolute;
+        height: 18px;
+        top: 17px;
+        left: 17px;
+        -webkit-text-stroke: 0.5px #060606;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 16px;
+        letter-spacing: 0.16px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .group-14 {
+        position: absolute;
+        width: 654px;
+        height: 28px;
+        top: 60px;
+        left: 18px;
+    }
+
+    .dashboard .group-15 {
+        position: absolute;
+        width: 654px;
+        height: 2px;
+        top: 27px;
+        left: 0;
+    }
+
+    .dashboard .frame-39 {
+        display: inline-flex;
+        align-items: center;
+        gap: 36px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+
+    .dashboard .frame-40 {
+        display: inline-flex;
+        height: 18px;
+        justify-content: center;
+        gap: 10px;
+        padding: 4px;
+        flex: 0 0 auto;
+        background-color: #2b5be61a;
+        border-radius: 17px;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard .frame-41 {
+        display: inline-flex;
+        gap: 10px;
+        flex: 0 0 auto;
+        margin-top: -0.5px;
+        margin-bottom: -0.5px;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard .text-wrapper-55 {
+        position: relative;
+        width: fit-content;
+        margin-top: -2px;
+        margin-left: -1px;
+        -webkit-text-stroke: 0.2px #2b5ce6;
+        color: #2b5ce6;
+        font-size: 10px;
+        letter-spacing: 0.1px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .text-wrapper-56 {
+        position: relative;
+        width: 64px;
+        margin-top: -1px;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.14px;
+        line-height: normal;
+    }
+
+    .dashboard .frame-42 {
+        display: flex;
+        width: 18px;
+        height: 18px;
+        justify-content: center;
+        gap: 10px;
+        padding: 4px;
+        background-color: #2b5be61a;
+        border-radius: 17px;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard .frame-43 {
+        display: inline-flex;
+        gap: 10px;
+        flex: 0 0 auto;
+        margin-top: -0.5px;
+        margin-bottom: -0.5px;
+        margin-left: -1px;
+        margin-right: -1px;
+        align-items: center;
+        position: relative;
+    }
+
+    .dashboard .group-16 {
+        position: absolute;
+        width: 557px;
+        height: 160px;
+        top: 102px;
+        left: 18px;
+    }
+
+    .dashboard .group-17 {
+        position: absolute;
+        width: 557px;
+        height: 24px;
+        top: 136px;
+        left: 0;
+    }
+
+    .dashboard .frame-44 {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+    }
+
+    .dashboard .vector-wrapper {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        background-color: #e65f2b;
+        border-radius: 9px;
+    }
+
+    .dashboard .vector-3 {
+        position: absolute;
+        width: 7px;
+        height: 5px;
+        top: 6px;
+        left: 6px;
+    }
+
+    .dashboard .text-wrapper-57 {
+        position: relative;
+        width: fit-content;
+        font-family: "Aeonik Pro TRIAL-Regular", Helvetica;
+        font-weight: 400;
+        color: #060606;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .dashboard .frame-45 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 0;
+        left: 488px;
+        background-color: #1a922d2e;
+        border-radius: 20px;
+    }
+
+    .dashboard .group-18 {
+        position: absolute;
+        width: 557px;
+        height: 24px;
+        top: 0;
+        left: 0;
+    }
+
+    .dashboard .group-19 {
+        position: absolute;
+        width: 554px;
+        height: 24px;
+        top: 34px;
+        left: 0;
+    }
+
+    .dashboard .frame-46 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 0;
+        left: 490px;
+        background-color: #ee1f1b2e;
+        border-radius: 20px;
+    }
+
+    .dashboard .group-20 {
+        position: absolute;
+        width: 554px;
+        height: 24px;
+        top: 68px;
+        left: 0;
+    }
+
+    .dashboard .group-21 {
+        position: absolute;
+        width: 556px;
+        height: 24px;
+        top: 102px;
+        left: 0;
+    }
+
+    .dashboard .group-22 {
+        position: relative;
+        width: 18px;
+        height: 18px;
+    }
+
+    .dashboard .ellipse-26 {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        top: -1px;
+        left: -1px;
+        border-radius: 10px;
+        border: 1px solid;
+        border-color: #060606a3;
+    }
+
+    .dashboard .frame-47 {
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 5px 8px;
+        position: absolute;
+        top: 0;
+        left: 489px;
+        background-color: #e65f2b2e;
+        border-radius: 20px;
+    }

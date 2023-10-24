@@ -31,7 +31,7 @@ namespace Final_Project.Controllers
 
         [HttpPost]
         public ActionResult Index(string username, string passcode)
-        {
+         {
             var issuccess = username;  //_loginUser.AuthenticateUser(username, passcode);
 
 
