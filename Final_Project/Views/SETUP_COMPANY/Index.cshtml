@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Final_Project.SETUP_COMPANY>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn" @Html.ActionLink("Create New", "Create")>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mobile_no)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.maker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mak_dt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.record_id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.addresss)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mobile_no)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mak_dt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.record_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.addresss)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

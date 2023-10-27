@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FabricModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Fabric.dbo.Company_bill' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Company_bill">
+          <Property Name="bill_date" Type="date" />
+          <Property Name="total_roll" Type="nvarchar" MaxLength="5" />
+          <Property Name="total_weight" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="total_rate" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="total_amount" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="challan_no" Type="nvarchar" MaxLength="80" />
+          <Property Name="Customer_name" Type="nvarchar" MaxLength="200" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Fabric.dbo.Company_tempbill' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Company_tempbill">
+          <Key>
+            <PropertyRef Name="Company_Name" />
+            <PropertyRef Name="Fabric" />
+          </Key>
+          <Property Name="Company_Name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Weights" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Fabric" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="rate" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="TotlaAmount" Type="varchar" MaxLength="200" />
+          <Property Name="maker_by" Type="varchar" MaxLength="200" />
+          <Property Name="mk_dt" Type="date" />
+          <Property Name="roll" Type="nvarchar" MaxLength="5" />
+          <Property Name="Colour" Type="nvarchar" MaxLength="20" />
+          <Property Name="d_date" Type="nvarchar" MaxLength="20" />
+          <Property Name="d_challan_no" Type="nvarchar" MaxLength="20" />
+          <Property Name="rowid" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Fabric.dbo.fabric_cloth' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="fabric_cloth">
+          <Property Name="fb_ID" Type="varchar" MaxLength="3" />
+          <Property Name="fabric_name" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Fabric.dbo.SETUP_COMPANY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SETUP_COMPANY">
+          <Key>
+            <PropertyRef Name="company_code" />
+            <PropertyRef Name="company_name" />
+          </Key>
+          <Property Name="company_code" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="company_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="mobile_no" Type="nvarchar" MaxLength="15" />
+          <Property Name="maker" Type="nvarchar" MaxLength="20" />
+          <Property Name="mak_dt" Type="date" />
+          <Property Name="record_id" Type="int" />
+          <Property Name="addresss" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Fabric.dbo.temp_bill' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="temp_bill">
+          <Key>
+            <PropertyRef Name="Company_Name" />
+            <PropertyRef Name="Fabric" />
+          </Key>
+          <Property Name="Company_Name" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Weights" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="Fabric" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="rate" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="numeric" Precision="18" Scale="3" />
+          <Property Name="TotlaAmount" Type="varchar" MaxLength="200" />
+          <Property Name="maker_by" Type="varchar" MaxLength="200" />
+          <Property Name="mk_dt" Type="date" />
+          <Property Name="roll" Type="nvarchar" MaxLength="5" />
+          <Property Name="Colour" Type="nvarchar" MaxLength="20" />
+          <Property Name="d_date" Type="nvarchar" MaxLength="20" />
+          <Property Name="d_challan_no" Type="nvarchar" MaxLength="20" />
+          <Property Name="rowid" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Fabric.dbo.Users' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Users">
+          <Property Name="Users_id" Type="varchar" MaxLength="255" />
+          <Property Name="Users_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Password" Type="varchar" MaxLength="255" />
+          <Property Name="PASSWD_CHG_DT" Type="date" />
+          <Property Name="status" Type="varchar" MaxLength="10" />
+        </EntityType>-->
+        <Function Name="Currency_ToWords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="Input" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="fnIntegerToWords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="Number" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="FUNC_AMOUNTTOWORD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="Input" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="FUNC_AMOUNTTOWORD_with_decimal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="Number" Type="numeric" Mode="In" />
+          <Parameter Name="CPaise" Type="char" Mode="In" />
+        </Function>
+        <Function Name="Num_ToWords" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+          <Parameter Name="Number" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="sp_billPayment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_CompanyCode" Type="varchar" Mode="In" />
+          <Parameter Name="p_Weight" Type="varchar" Mode="In" />
+          <Parameter Name="p_d_date" Type="varchar" Mode="In" />
+          <Parameter Name="p_challan_no" Type="varchar" Mode="In" />
+          <Parameter Name="p_Colour" Type="varchar" Mode="In" />
+          <Parameter Name="p_fabric" Type="varchar" Mode="In" />
+          <Parameter Name="p_rate" Type="varchar" Mode="In" />
+          <Parameter Name="p_roll" Type="varchar" Mode="In" />
+          <Parameter Name="p_amount" Type="varchar" Mode="In" />
+          <Parameter Name="p_totalamount" Type="varchar" Mode="In" />
+          <Parameter Name="p_User" Type="varchar" Mode="In" />
+          <Parameter Name="p_Maker" Type="varchar" Mode="In" />
+          <Parameter Name="p_Makerdt" Type="varchar" Mode="In" />
+          <Parameter Name="ActionType" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Company" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_CompanyCode" Type="varchar" Mode="In" />
+          <Parameter Name="p_CompanyName" Type="varchar" Mode="In" />
+          <Parameter Name="p_Mobile_no" Type="varchar" Mode="In" />
+          <Parameter Name="p_Address" Type="varchar" Mode="In" />
+          <Parameter Name="p_Maker" Type="varchar" Mode="In" />
+          <Parameter Name="p_Makerdt" Type="varchar" Mode="In" />
+          <Parameter Name="ActionType" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Customer_invoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_CompanyCode" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_userlogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_userid" Type="varchar" Mode="In" />
+          <Parameter Name="p_password" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="FabricModelStoreContainer">
+          <EntitySet Name="Company_tempbill" EntityType="Self.Company_tempbill" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Company_tempbill].[Company_Name] AS [Company_Name], 
+    [Company_tempbill].[Weights] AS [Weights], 
+    [Company_tempbill].[Fabric] AS [Fabric], 
+    [Company_tempbill].[rate] AS [rate], 
+    [Company_tempbill].[Amount] AS [Amount], 
+    [Company_tempbill].[TotlaAmount] AS [TotlaAmount], 
+    [Company_tempbill].[maker_by] AS [maker_by], 
+    [Company_tempbill].[mk_dt] AS [mk_dt], 
+    [Company_tempbill].[roll] AS [roll], 
+    [Company_tempbill].[Colour] AS [Colour], 
+    [Company_tempbill].[d_date] AS [d_date], 
+    [Company_tempbill].[d_challan_no] AS [d_challan_no], 
+    [Company_tempbill].[rowid] AS [rowid]
+    FROM [dbo].[Company_tempbill] AS [Company_tempbill]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SETUP_COMPANY" EntityType="Self.SETUP_COMPANY" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SETUP_COMPANY].[company_code] AS [company_code], 
+    [SETUP_COMPANY].[company_name] AS [company_name], 
+    [SETUP_COMPANY].[mobile_no] AS [mobile_no], 
+    [SETUP_COMPANY].[maker] AS [maker], 
+    [SETUP_COMPANY].[mak_dt] AS [mak_dt], 
+    [SETUP_COMPANY].[record_id] AS [record_id], 
+    [SETUP_COMPANY].[addresss] AS [addresss]
+    FROM [dbo].[SETUP_COMPANY] AS [SETUP_COMPANY]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="temp_bill" EntityType="Self.temp_bill" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [temp_bill].[Company_Name] AS [Company_Name], 
+    [temp_bill].[Weights] AS [Weights], 
+    [temp_bill].[Fabric] AS [Fabric], 
+    [temp_bill].[rate] AS [rate], 
+    [temp_bill].[Amount] AS [Amount], 
+    [temp_bill].[TotlaAmount] AS [TotlaAmount], 
+    [temp_bill].[maker_by] AS [maker_by], 
+    [temp_bill].[mk_dt] AS [mk_dt], 
+    [temp_bill].[roll] AS [roll], 
+    [temp_bill].[Colour] AS [Colour], 
+    [temp_bill].[d_date] AS [d_date], 
+    [temp_bill].[d_challan_no] AS [d_challan_no], 
+    [temp_bill].[rowid] AS [rowid]
+    FROM [dbo].[temp_bill] AS [temp_bill]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FabricModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Company_tempbill">
+          <Key>
+            <PropertyRef Name="Company_Name" />
+            <PropertyRef Name="Fabric" />
+          </Key>
+          <Property Name="Company_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Weights" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Fabric" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rate" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="TotlaAmount" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="maker_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="mk_dt" Type="DateTime" Precision="0" />
+          <Property Name="roll" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Colour" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="d_date" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="d_challan_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="rowid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SETUP_COMPANY">
+          <Key>
+            <PropertyRef Name="company_code" />
+            <PropertyRef Name="company_name" />
+          </Key>
+          <Property Name="company_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="company_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mobile_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="maker" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="mak_dt" Type="DateTime" Precision="0" />
+          <Property Name="record_id" Type="Int32" />
+          <Property Name="addresss" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="temp_bill">
+          <Key>
+            <PropertyRef Name="Company_Name" />
+            <PropertyRef Name="Fabric" />
+          </Key>
+          <Property Name="Company_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Weights" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="Fabric" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="rate" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="TotlaAmount" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="maker_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="mk_dt" Type="DateTime" Precision="0" />
+          <Property Name="roll" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="Colour" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="d_date" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="d_challan_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="rowid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="FabricEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Company_tempbill" EntityType="Self.Company_tempbill" />
+          <EntitySet Name="SETUP_COMPANY" EntityType="Self.SETUP_COMPANY" />
+          <EntitySet Name="temp_bill" EntityType="Self.temp_bill" />
+          <FunctionImport Name="sp_billPayment" ReturnType="Collection(FabricModel.sp_billPayment_Result)">
+            <Parameter Name="p_CompanyCode" Mode="In" Type="String" />
+            <Parameter Name="p_Weight" Mode="In" Type="String" />
+            <Parameter Name="p_d_date" Mode="In" Type="String" />
+            <Parameter Name="p_challan_no" Mode="In" Type="String" />
+            <Parameter Name="p_Colour" Mode="In" Type="String" />
+            <Parameter Name="p_fabric" Mode="In" Type="String" />
+            <Parameter Name="p_rate" Mode="In" Type="String" />
+            <Parameter Name="p_roll" Mode="In" Type="String" />
+            <Parameter Name="p_amount" Mode="In" Type="String" />
+            <Parameter Name="p_totalamount" Mode="In" Type="String" />
+            <Parameter Name="p_User" Mode="In" Type="String" />
+            <Parameter Name="p_Maker" Mode="In" Type="String" />
+            <Parameter Name="p_Makerdt" Mode="In" Type="String" />
+            <Parameter Name="ActionType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Company" ReturnType="Collection(FabricModel.sp_Company_Result)">
+            <Parameter Name="p_CompanyCode" Mode="In" Type="String" />
+            <Parameter Name="p_CompanyName" Mode="In" Type="String" />
+            <Parameter Name="p_Mobile_no" Mode="In" Type="String" />
+            <Parameter Name="p_Address" Mode="In" Type="String" />
+            <Parameter Name="p_Maker" Mode="In" Type="String" />
+            <Parameter Name="p_Makerdt" Mode="In" Type="String" />
+            <Parameter Name="ActionType" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Customer_invoice" ReturnType="Collection(FabricModel.sp_Customer_invoice_Result)">
+            <Parameter Name="p_CompanyCode" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_userlogin" ReturnType="Collection(FabricModel.sp_userlogin_Result)">
+            <Parameter Name="p_userid" Mode="In" Type="String" />
+            <Parameter Name="p_password" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="sp_billPayment_Result">
+          <Property Type="String" Name="company_code" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="Company_Name" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_Company_Result">
+          <Property Type="String" Name="company_code" Nullable="false" MaxLength="5" />
+          <Property Type="String" Name="Company_Name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Mobile_No" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="addresss" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_Customer_invoice_Result">
+          <Property Type="String" Name="d_date" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="d_challan_no" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Roll" Nullable="true" MaxLength="5" />
+          <Property Type="Decimal" Name="Weights" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="String" Name="Fabric" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Colour" Nullable="true" MaxLength="20" />
+          <Property Type="Decimal" Name="Rate" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="Amount" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_userlogin_Result">
+          <Property Type="String" Name="Users_id" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Users_Name" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="255" />
+          <Property Type="DateTime" Name="PASSWD_CHG_DT" Nullable="true" />
+          <Property Type="String" Name="status" Nullable="true" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FabricModelStoreContainer" CdmEntityContainer="FabricEntities">
+          <EntitySetMapping Name="Company_tempbill">
+            <EntityTypeMapping TypeName="FabricModel.Company_tempbill">
+              <MappingFragment StoreEntitySet="Company_tempbill">
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Weights" ColumnName="Weights" />
+                <ScalarProperty Name="Fabric" ColumnName="Fabric" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TotlaAmount" ColumnName="TotlaAmount" />
+                <ScalarProperty Name="maker_by" ColumnName="maker_by" />
+                <ScalarProperty Name="mk_dt" ColumnName="mk_dt" />
+                <ScalarProperty Name="roll" ColumnName="roll" />
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="d_date" ColumnName="d_date" />
+                <ScalarProperty Name="d_challan_no" ColumnName="d_challan_no" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SETUP_COMPANY">
+            <EntityTypeMapping TypeName="FabricModel.SETUP_COMPANY">
+              <MappingFragment StoreEntitySet="SETUP_COMPANY">
+                <ScalarProperty Name="company_code" ColumnName="company_code" />
+                <ScalarProperty Name="company_name" ColumnName="company_name" />
+                <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+                <ScalarProperty Name="maker" ColumnName="maker" />
+                <ScalarProperty Name="mak_dt" ColumnName="mak_dt" />
+                <ScalarProperty Name="record_id" ColumnName="record_id" />
+                <ScalarProperty Name="addresss" ColumnName="addresss" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="temp_bill">
+            <EntityTypeMapping TypeName="FabricModel.temp_bill">
+              <MappingFragment StoreEntitySet="temp_bill">
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Weights" ColumnName="Weights" />
+                <ScalarProperty Name="Fabric" ColumnName="Fabric" />
+                <ScalarProperty Name="rate" ColumnName="rate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="TotlaAmount" ColumnName="TotlaAmount" />
+                <ScalarProperty Name="maker_by" ColumnName="maker_by" />
+                <ScalarProperty Name="mk_dt" ColumnName="mk_dt" />
+                <ScalarProperty Name="roll" ColumnName="roll" />
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="d_date" ColumnName="d_date" />
+                <ScalarProperty Name="d_challan_no" ColumnName="d_challan_no" />
+                <ScalarProperty Name="rowid" ColumnName="rowid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_billPayment" FunctionName="FabricModel.Store.sp_billPayment">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FabricModel.sp_billPayment_Result">
+                <ScalarProperty Name="company_code" ColumnName="company_code" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Company" FunctionName="FabricModel.Store.sp_Company">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FabricModel.sp_Company_Result">
+                <ScalarProperty Name="company_code" ColumnName="company_code" />
+                <ScalarProperty Name="Company_Name" ColumnName="Company_Name" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="addresss" ColumnName="addresss" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_Customer_invoice" FunctionName="FabricModel.Store.sp_Customer_invoice">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FabricModel.sp_Customer_invoice_Result">
+                <ScalarProperty Name="d_date" ColumnName="d_date" />
+                <ScalarProperty Name="d_challan_no" ColumnName="d_challan_no" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Weights" ColumnName="Weights" />
+                <ScalarProperty Name="Fabric" ColumnName="Fabric" />
+                <ScalarProperty Name="Colour" ColumnName="Colour" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_userlogin" FunctionName="FabricModel.Store.sp_userlogin">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="FabricModel.sp_userlogin_Result">
+                <ScalarProperty Name="Users_id" ColumnName="Users_id" />
+                <ScalarProperty Name="Users_Name" ColumnName="Users_Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PASSWD_CHG_DT" ColumnName="PASSWD_CHG_DT" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

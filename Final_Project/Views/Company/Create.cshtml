@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Final_Project.Models.Company>
+@{
+    ViewBag.Title = "Company Setup";
+}
+
+<h2>Company Setup</h2>
+<br />
+
+<p>
+    <a class="btn btn-outline-dark" @Html.ActionLink("Return", "SETUP_COMPANY")
+</p>
+<br />
+
+<form class="row g-3">
+    <fieldset>
+        <legend>Personalia:</legend>
+        <div class="col-md-5">
+            <label for="floatingInput" class="form-label">Company Code</label>
+            <input type="text" class="form-control" id="floatingInput" required>
+        </div>
+        <div class="col-md-5">
+            <label for="floatingInput" class="form-label">Company Name</label>
+            <input type="text" class="form-control" id="floatingInput" required>
+        </div>
+
+        <div class="col-md-5">
+            <label for="floatingInput" class="form-label">Contact Number</label>
+            <input type="text" class="form-control" id="floatingInput">
+        </div>
+        <div class="col-md-5">
+            <label for="floatingInput" class="form-label">Company Address</label>
+            <input type="text" class="form-control" id="floatingInput">
+        </div>
+        
+        <br />
+
+        <div class="col-12">
+            <button class="btn btn-outline-dark" type="submit">Submit</button>
+        </div>
+    </fieldset>
+</form>

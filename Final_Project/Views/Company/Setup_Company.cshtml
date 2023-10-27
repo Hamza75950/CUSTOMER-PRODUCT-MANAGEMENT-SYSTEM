@@ -1,12 +1,51 @@
-﻿
-@{
-    ViewBag.Title = "Company Setup";
-}
+﻿@model IEnumerable<Final_Project.Models.Company>
 
+    @{
+        ViewBag.Title = "Company Setup";
+    }
+@using (Html.BeginForm("Edit", "Create", FormMethod.Post))
+<h2>Company Setup</h2>
+<br />
 
-<form>
-    <div>
+<p>
+    <a class="btn btn-outline-dark" @Html.ActionLink("Create New", "Create")
+</p>
+<br />
+<table class="table table-striped table-hover">
 
-    </div>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Name)
+        </th>
 
-</form>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Company_Address)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Address)
+            </td>
+        </tr>
+    }
+
+</table>
