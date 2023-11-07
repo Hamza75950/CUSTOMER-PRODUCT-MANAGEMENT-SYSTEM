@@ -126,18 +126,6 @@
     border-radius: 13px;
 }
 
-.element-minimalism-login .text-wrapper-3 {
-    position: absolute;
-    top: 17px;
-    left: 48px;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #1c1c1c;
-    font-size: 12px;
-    letter-spacing: 0;
-    line-height: normal;
-}
-
 
 
 .element-minimalism-login .frame {
@@ -161,7 +149,7 @@
     width: 366px;
     height: 52px;
     top: 402px;
-    left: 160px;
+    left: 48px;
 }
 
 .element-minimalism-login .overlap-2 {
@@ -172,10 +160,22 @@
     border-radius: 13px;
 }
 
+    .element-minimalism-login .text-wrapper-3 {
+        position: absolute;
+        top: 17px;
+        left: 48px;
+        font-family: "Poppins-Regular", Helvetica;
+        font-weight: 400;
+        color: #1c1c1c;
+        font-size: 12px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
     .element-minimalism-login .text-wrapper-4 {
         position: absolute;
         top: 17px;
-        left: 166px;
+        left: 48px;
         font-family: "Poppins-Bold", Helvetica;
         font-weight: 700;
         color: #ffffff;

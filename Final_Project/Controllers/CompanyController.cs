@@ -12,7 +12,7 @@ namespace Final_Project.Controllers
 {
     public class CompanyController : Controller
     {
-       private DataBase DB = new DataBase();
+        DataBase DB = new DataBase();
         SqlCommand sqlCmd = null;
         // GET: Copany
         public ActionResult Setup_Company()

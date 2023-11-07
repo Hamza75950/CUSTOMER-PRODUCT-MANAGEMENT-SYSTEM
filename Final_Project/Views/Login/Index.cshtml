@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Login Page";
+    Layout = null;
 }
 <!DOCTYPE html>
 <html>
@@ -7,71 +7,41 @@
     <link href="~/Content/Login.css" rel="stylesheet" />
 </head>
 <body>
-
     <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
         <div class="element-minimalism-login">
             <div class="div">
-                @*<img class="rectangle" src="~/img/Rectangle 4.png" />*@
+                <img class="rectangle" src="img/rectangle-4.png" />
                 <div class="group">
-                    @*<div class="text-wrapper">Welcome</div>*@
-
+                    <div class="text-wrapper">Welcome</div>
                 </div>
+                <div class="overlap-group-wrapper">
+                    <div class="overlap-group">
 
+                        <img class="subtract" src="img/subtract.svg" />
+                    </div>
+                </div>
                 <div class="overlap-wrapper">
-                    <div>
-                        @*<input type="password" class="element-minimalism-login overlap" name="passcode" value="" required>*@
-                        @Html.TextBox("txtPassword", "", new { @class = "overlap element-minimalism-login  text-wrapper-3  " })
 
-                        <img class="frame" src="~/img/frame.svg" />
+                    @Html.TextBox("txtPassword", "", new { @class = "overlap element-minimalism-login  text-wrapper-3  " })
+                    @*<img class="frame" src="img/frame.svg" />*@
 
-                    </div>
                 </div>
-
                 <div class="div-wrapper">
-                    <div class="overlap">
-                        <input name="username" class="element-minimalism-login overlap" value="" required>
-                        <img class="frame" src="~/img/name.svg" />
 
-                    </div>
-                </div>
-
-
-                <div class="div-wrapper">
-                    <div class="group-2">
-                      
-                            <input type="submit" class="element-minimalism-login overlap-2 " name="commit" value="Login">
-                     
-
-                        <img class="vector" src="~/img/vector.svg" />
-                    </div>
+                    @Html.TextBox("txtusername", "", new { @class = "overlap element-minimalism-login text-wrapper-3    " })
+                    @*<img class="frame" src="img/image.svg" />*@
 
                 </div>
+
+                <div class="group-2">
+                    <input type="submit" class="element-minimalism-login overlap-2  text-wrapper-3"  name="commit" value="Login">
+                </div>
+
+                <img class="vector" src="img/vector.svg" />
             </div>
         </div>
-      
-
 
         @ViewBag.username
     </form>
 </body>
-
-@*<body>
-        <div class="login">
-            <h1>Login to Web App</h1>
-
-            <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
-                <p><input type="text" name="username" value="" placeholder="Username or Email" required></p>
-                <p><input type="password" name="passcode" value="" placeholder="Password" required></p>
-                <p class="remember_me">
-                    <label>
-                        <input type="checkbox" name="remember_me" id="remember_me">
-                        Remember me on this computer
-                    </label>
-                </p>
-                <p class="submit"><input type="submit" name="commit" value="Login"></p>
-                <hr />
-                @ViewBag.username
-            </form>
-        </div>
-    </body>*@
 </html>
