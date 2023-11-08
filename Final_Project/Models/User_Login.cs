@@ -7,13 +7,15 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace Final_Project.Models
 {
-   
-    public class User_Login
-    { 
+
+    public class User_Login 
+    {
+       
         //[Key]
-      //  public int id { get; set; }
+        //  public int id { get; set; }
 
         [Required(ErrorMessage = "Please Enter Username")]
         [Display(Name = "Please Enter Username")]
@@ -22,8 +24,8 @@ namespace Final_Project.Models
         [Required(ErrorMessage = "Please Enter Password")]
         [Display(Name = "Please Enter Password")]
         public string passcode { get; set; }
-       // public int isActive { get; set; }
+        // public int isActive { get; set; }
+
     }
 
-   
 }

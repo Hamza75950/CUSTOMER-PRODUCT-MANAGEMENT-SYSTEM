@@ -1,67 +1,66 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using System.Web.UI.WebControls;
-using System.Globalization;
-using System.Security.Claims;
-using System.Threading.Tasks;
 using Final_Project.DB;
 using Final_Project.Models;
+using BussinessLogic.UserMangment;
 
 namespace Final_Project.Controllers
 {
+
     public class LoginController : Controller
     {
-        DataBase DB = new DataBase();
-        SqlCommand sqlCmd = null;
+        UserLogin obj_Login = new UserLogin();
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Index(string username, string passcode)
-         {
-            var issuccess = ExecuteProcedure(username, passcode);
+        public ActionResult Index(string User_id, string Password)
+        {
 
 
-            if (issuccess != null)
+            DataTable dt_data = new DataTable();
+            dt_data = obj_Login.user_login(User_id, Password);
+
+
+
+
+            if (dt_data.Rows.Count > 0)
             {
-                ViewBag.username = string.Format("Successfully logged-in", username);
-                FormsAuthentication.SetAuthCookie(username, false);
+                ViewBag.username = string.Format("Successfully logged-in", User_id);
+                FormsAuthentication.SetAuthCookie(User_id, false);
                 TempData["username"] = "Ahmed";
-                return RedirectToAction("Dashboard","Home");
+                return RedirectToAction("Dashboard", "Home");
             }
             else
             {
-                ViewBag.username = string.Format("Login Failed ", username);
+                ViewBag.username = string.Format("Login Failed ", User_id);
                 return View();
             }
         }
 
 
-        DataTable ExecuteProcedure(string sUserName, string sPassword)
-        {
+        //DataTable ExecuteProcedure(string sUserName, string sPassword)
+        //{
 
-            List<Company> studentlist = new List<Company>();
-            SqlConnection con = new SqlConnection(DB.DBConn);
-            con.Open();
-            DataTable dtData = new DataTable();
-            sqlCmd = new SqlCommand("sp_userlogin", con);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@p_userid", sUserName);
-            sqlCmd.Parameters.AddWithValue("@p_password", sPassword);
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCmd);
-            sqlSda.Fill(dtData);
-            sqlCmd.ExecuteNonQuery();
-            con.Close();
+        //    List<Company> studentlist = new List<Company>();
+        //    SqlConnection con = new SqlConnection(DB.DBConn);
+        //    con.Open();
+        //    DataTable dtData = new DataTable();
+        //    sqlCmd = new SqlCommand("sp_userlogin", con);
+        //    sqlCmd.CommandType = CommandType.StoredProcedure;
+        //    sqlCmd.Parameters.AddWithValue("@p_userid", sUserName);
+        //    sqlCmd.Parameters.AddWithValue("@p_password", sPassword);
+        //    SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCmd);
+        //    sqlSda.Fill(dtData);
+        //    sqlCmd.ExecuteNonQuery();
+        //    con.Close();
 
-            return dtData;
-        }
+        //    return dtData;
+        //}
     }
 }
