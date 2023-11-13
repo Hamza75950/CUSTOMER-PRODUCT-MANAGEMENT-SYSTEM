@@ -6,19 +6,28 @@
 <head>
 
     <link href="~/Content/Login.css" rel="stylesheet" />
+  <script>
+      $(document).ajaxStart(function () {
+    $("#loading-overlay").show();
+});
+
+$(document).ajaxStop(function () {
+    $("#loading-overlay").hide();
+});
+  </script>
 </head>
 <body>
     <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
         <div class="element-minimalism-login">
             <div class="div">
-                <img class="rectangle" src="img/rectangle-4.png" />
+                @*<img class="rectangle" src="~/img/Rectangle 4.png" />*@
                 <div class="group">
                     <div class="text-wrapper">Welcome</div>
                 </div>
                 <div class="overlap-group-wrapper">
                     <div class="overlap-group">
 
-                        <img class="subtract" src="img/subtract.svg" />
+                        <img class="subtract" src="~/img/subtract.svg" />
                     </div>
                 </div>
                 <div class="overlap-wrapper">
@@ -35,13 +44,17 @@
                 </div>
 
                 <div class="group-2">
-                    <input type="submit" class="element-minimalism-login overlap-2  text-wrapper-4"   name="commit" value="Login">
+                    <input type="submit" class="element-minimalism-login overlap-2  text-wrapper-4" name="commit" value="Login">
+
                 </div>
 
-                <img class="vector" src="img/vector.svg" />
+                <img class="vector" src="~/img/vector.svg" />
+              
             </div>
         </div>
-
+        <div id="loading-overlay">
+            <div class="custom-loader"></div>
+        </div>
         @ViewBag.username
     </form>
 </body>
