@@ -10,7 +10,18 @@ namespace Final_Project.Controllers
     {
         public ActionResult Dashboard()
         {
-            return View();
+
+            if (Session["Users_id"] != null)
+            {
+                ViewBag.Message = "Welcom on Board  : " + Session["Users_id"].ToString();
+                return View();
+
+            }
+
+            else
+            {
+                return RedirectToAction("Index");
+            }
         }
 
         public ActionResult About()

@@ -21,19 +21,13 @@ namespace Final_Project.Controllers
         [HttpPost]
         public ActionResult Index(string User_id, string Password)
         {
-
-
             DataTable dt_data = new DataTable();
             dt_data = obj_Login.user_login(User_id, Password);
-
-
-
-
             if (dt_data.Rows.Count > 0)
             {
                 ViewBag.username = string.Format("Successfully logged-in", User_id);
                 FormsAuthentication.SetAuthCookie(User_id, false);
-                TempData["username"] = "Ahmed";
+                Session["Users_id"] = User_id;
                 return RedirectToAction("Dashboard", "Home");
             }
             else
@@ -42,25 +36,6 @@ namespace Final_Project.Controllers
                 return View();
             }
         }
-
-
-        //DataTable ExecuteProcedure(string sUserName, string sPassword)
-        //{
-
-        //    List<Company> studentlist = new List<Company>();
-        //    SqlConnection con = new SqlConnection(DB.DBConn);
-        //    con.Open();
-        //    DataTable dtData = new DataTable();
-        //    sqlCmd = new SqlCommand("sp_userlogin", con);
-        //    sqlCmd.CommandType = CommandType.StoredProcedure;
-        //    sqlCmd.Parameters.AddWithValue("@p_userid", sUserName);
-        //    sqlCmd.Parameters.AddWithValue("@p_password", sPassword);
-        //    SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCmd);
-        //    sqlSda.Fill(dtData);
-        //    sqlCmd.ExecuteNonQuery();
-        //    con.Close();
-
-        //    return dtData;
-        //}
+      
     }
 }
