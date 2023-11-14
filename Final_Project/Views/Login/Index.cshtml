@@ -6,21 +6,13 @@
 <head>
 
     <link href="~/Content/Login.css" rel="stylesheet" />
-  <script>
-      $(document).ajaxStart(function () {
-    $("#loading-overlay").show();
-});
 
-$(document).ajaxStop(function () {
-    $("#loading-overlay").hide();
-});
-  </script>
 </head>
 <body>
     <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
         <div class="element-minimalism-login">
             <div class="div">
-                @*<img class="rectangle" src="~/img/Rectangle 4.png" />*@
+                <img class="rectangle" src="~/img/Rectangle 4.png" />
                 <div class="group">
                     <div class="text-wrapper">Welcome</div>
                 </div>
@@ -32,14 +24,14 @@ $(document).ajaxStop(function () {
                 </div>
                 <div class="overlap-wrapper">
 
-                    @Html.TextBox("Password", "", new { @class = "overlap element-minimalism-login  text-wrapper-3  " })
-                    @*<img class="frame" src="img/frame.svg" />*@
+                    @Html.TextBox("Password", "", new { @class = "overlap element-minimalism-login  text-wrapper-3  ", placeholder="Enter Password", @type = "password"})
+                    @*<img class="frame" src="~/img/frame.svg" />*@
 
                 </div>
                 <div class="div-wrapper">
 
-                    @Html.TextBox("User_id", "", new { @class = "overlap element-minimalism-login text-wrapper-3    " })
-                    @*<img class="frame" src="img/image.svg" />*@
+                    @Html.TextBox("User_id", "", new { @class = "overlap element-minimalism-login text-wrapper-3 ", placeholder="Enter User ID"})
+                    @*<img class="frame" src="~/img/image.svg" />*@
 
                 </div>
 
@@ -49,13 +41,20 @@ $(document).ajaxStop(function () {
                 </div>
 
                 <img class="vector" src="~/img/vector.svg" />
-              
+
             </div>
         </div>
-        <div id="loading-overlay">
-            <div class="custom-loader"></div>
-        </div>
-        @ViewBag.username
+       
+        @if (ViewBag.username != null)
+        {
+            <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@ViewBag.username");
+            };
+            </script>
+
+        }
     </form>
 </body>
 </html>

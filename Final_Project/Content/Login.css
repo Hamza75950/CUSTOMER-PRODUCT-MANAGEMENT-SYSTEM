@@ -18,9 +18,13 @@
 }
 
     .element-minimalism-login .div {
-        background-color: #ffffff;
+        background-color: #f5f5f5;
         width: 1366px;
         height: 768px;
+        top: 75px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
+        border-radius: 50px;
+        text-align: center;
         position: relative;
     }
 
@@ -126,13 +130,23 @@
     border-radius: 13px;
 }
 
-
+    .element-minimalism-login .text-wrapper-3 {
+        position: absolute;
+        top: 17px;
+        left: 48px;
+        font-family: "Poppins-Regular", Helvetica;
+        font-weight: 400;
+        color: #1c1c1c;
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
 
 .element-minimalism-login .frame {
     position: absolute;
     width: 24px;
     height: 24px;
-    top: 14px;
+    top: 35px;
     left: 18px;
 }
 
@@ -154,32 +168,22 @@
 
 .element-minimalism-login .overlap-2 {
     background-color: #1c1c1c;
-    position: relative;
+    position: absolute;
     width: 364px;
     height: 52px;
     border-radius: 13px;
 }
 
-    .element-minimalism-login .text-wrapper-3 {
-        position: absolute;
-        top: 17px;
-        left: 48px;
-        font-family: "Poppins-Regular", Helvetica;
-        font-weight: 400;
-        color: #1c1c1c;
-        font-size: 12px;
-        letter-spacing: 0;
-        line-height: normal;
-    }
+    
 
     .element-minimalism-login .text-wrapper-4 {
         position: absolute;
         top: 17px;
         left: 160px;
-        font-family: "Poppins-Bold", Helvetica;
+        font-family: "Poppins-Regular", Helvetica;
         font-weight: 700;
         color: #ffffff;
-        font-size: 12px;
+        font-size: 18px;
         letter-spacing: 0;
         line-height: normal;
     }
