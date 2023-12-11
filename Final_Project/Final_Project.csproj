@@ -134,7 +134,6 @@
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\SETUP_COMPANYController.cs" />
     <Compile Include="DB\DataBase.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2707,12 +2706,6 @@
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="packages.config" />
-    <Content Include="Views\Shared\Dashboard.cshtml" />
-    <Content Include="Views\SETUP_COMPANY\Create.cshtml" />
-    <Content Include="Views\SETUP_COMPANY\Delete.cshtml" />
-    <Content Include="Views\SETUP_COMPANY\Details.cshtml" />
-    <Content Include="Views\SETUP_COMPANY\Edit.cshtml" />
-    <Content Include="Views\SETUP_COMPANY\Index.cshtml" />
     <Content Include="Views\Company\Setup_Company.cshtml" />
     <Content Include="Views\Company\Create.cshtml" />
     <Content Include="Views\Login\View.cshtml" />
@@ -2721,9 +2714,9 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BAL\BussinessLogic.csproj">
-      <Project>{f93603e3-3401-4ca7-ab93-9ebf30a2864f}</Project>
-      <Name>BussinessLogic</Name>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{9e8927df-3c65-4cde-8307-ee49263d16d6}</Project>
+      <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

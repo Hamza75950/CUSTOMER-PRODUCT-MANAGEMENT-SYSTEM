@@ -5,14 +5,15 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Final_Project.DB;
 using Final_Project.Models;
-using BussinessLogic.UserMangment;
+
+using DataAccessLayer;
 
 namespace Final_Project.Controllers
 {
 
     public class LoginController : Controller
     {
-        UserLogin obj_Login = new UserLogin();
+        DAL _DAL = new DAL();
         public ActionResult Index()
         {
             return View();
@@ -22,7 +23,7 @@ namespace Final_Project.Controllers
         public ActionResult Index(string User_id, string Password)
         {
             DataTable dt_data = new DataTable();
-            dt_data = obj_Login.user_login(User_id, Password);
+            dt_data = user_login(User_id, Password);
             if (dt_data.Rows.Count > 0)
             {
                 ViewBag.username = string.Format("Successfully logged-in", User_id);
@@ -36,6 +37,22 @@ namespace Final_Project.Controllers
                 return View();
             }
         }
-      
+
+
+
+        public DataTable user_login(string p_userid, string p_password)
+        {
+            string storedProcedureName = "sp_userlogin";
+            object[] parameterValues = new object[] { p_userid, p_password };
+
+            _DAL.OpenConnection();
+
+
+            _DAL.LoadSpParameters(storedProcedureName, parameterValues);
+            DataTable dt_data = _DAL.GetDataTable();
+
+            return dt_data;
+
+        }
     }
 }
