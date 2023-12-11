@@ -14,7 +14,7 @@ namespace DataAccessLayer
         private static System.Collections.Hashtable SqlparamCache = System.Collections.Hashtable.Synchronized(new System.Collections.Hashtable());
         private SqlConnection Connection = new SqlConnection();
 
-        public static string ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=Fabric;Integrated Security=True"; //ConfigurationSettings.AppSettings["Ahmed_Fabric.Properties.Settings.FabricConnectionString"].ToString();
+        public static string ConnectionString = ConfigurationSettings.AppSettings["DBCon"].ToString();
 
         private SqlCommand DbCommand = new SqlCommand();
         private SqlDataAdapter DtAdapter = new SqlDataAdapter();

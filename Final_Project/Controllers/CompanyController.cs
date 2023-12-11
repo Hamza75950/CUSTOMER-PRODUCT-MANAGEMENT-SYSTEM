@@ -34,13 +34,14 @@ namespace Final_Project.Controllers
 
         // POST: Copany/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(string company_code = "")
         {
             try
             {
-                // TODO: Add insert logic here
+                DataTable dtdata = null;
+                dtdata = ExecuteProcedure("FetchData", "", "", "");
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Company");
             }
             catch
             {

@@ -5,18 +5,19 @@
 
 <h2>Company Setup</h2>
 <br />
-
 <p>
     <a class="btn btn-outline-dark" @Html.ActionLink("Return", "SETUP_COMPANY")
 </p>
-<br />
-
+@using (Html.BeginForm())
+{
 <form class="row g-3">
-    <fieldset>
+    <fieldset class="row g-3">
         <legend>Personalia:</legend>
+
         <div class="col-md-5">
             <label for="floatingInput" class="form-label">Company Code</label>
             <input type="text" class="form-control" id="floatingInput" required>
+            @Html.TextBox("Company_Code", "", new { @class = "form-control", placeholder = "Enter Company" })
         </div>
         <div class="col-md-5">
             <label for="floatingInput" class="form-label">Company Name</label>
@@ -31,11 +32,13 @@
             <label for="floatingInput" class="form-label">Company Address</label>
             <input type="text" class="form-control" id="floatingInput">
         </div>
-        
+
         <br />
 
         <div class="col-12">
             <button class="btn btn-outline-dark" type="submit">Submit</button>
         </div>
+
     </fieldset>
 </form>
+}
