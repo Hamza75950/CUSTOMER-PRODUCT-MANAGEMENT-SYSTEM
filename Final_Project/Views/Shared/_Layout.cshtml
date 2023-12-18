@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>@ViewBag.Title - My ASP.NET Application</title>
+        <title>@ViewBag.Title</title>
         <link href="~/Content/dist/vendors/simplebar/css/simplebar.css" rel="stylesheet" />
         <link href="~/Content/dist/css/vendors/simplebar.css" rel="stylesheet" />
         <link href="~/Content/dist/css/style.css" rel="stylesheet" />
@@ -23,29 +23,7 @@
                 </svg>
             </div>
             <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <svg class="nav-icon">
-                            <use xlink:href="~/Content/dist/vendors/coreui/icons/svg/free.svg#cil-speedometer"></use>
-                        </svg> Dashboard<span class="badge badge-sm bg-info ms-auto">NEW</span>
-                    </a>
-                </li>
-                <li class="nav-title">Theme</li>
-                <li class="nav-item">
-                    <a class="nav-link" href="colors.html">
-                        <svg class="nav-icon">
-                            <use xlink:href="~/Content/dist/vendors/coreui/icons/svg/free.svg#cil-drop"></use>
-                        </svg> Colors
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="typography.html">
-                        <svg class="nav-icon">
-                            <use xlink:href="~/Content/dist/vendors/coreui/icons/svg/free.svg#cil-pencil"></use>
-                        </svg> Typography
-                    </a>
-                </li>
-                <li class="nav-title">Components</li>
+             
                 <li class="nav-group">
                     <a class="nav-link nav-group-toggle" href="#">
                         <svg class="nav-icon">
@@ -56,7 +34,16 @@
                         <li class="nav-item"><a class="nav-link" @Html.ActionLink("Craete Company", "SETUP_COMPANY", "Company")</li>
                     </ul>
                 </li>
-
+                <li class="nav-group">
+                    <a class="nav-link nav-group-toggle" href="#">
+                        <svg class="nav-icon">
+                            <use xlink:href="~/Content/dist/vendors/coreui/icons/svg/free.svg#cil-balance-scale"></use>
+                        </svg> Bill Payment
+                    </a>
+                    <ul class="nav-group-items">
+                        <li class="nav-item"><a class="nav-link" @Html.ActionLink("Craete Bill", "Index", "Bill_Gen")</li>
+                    </ul>
+                </li>
 
             </ul>
             <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>

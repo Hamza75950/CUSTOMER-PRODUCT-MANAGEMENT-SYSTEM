@@ -7,12 +7,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Final_Project.DataBase;
 
 namespace Final_Project.Controllers
 {
     public class CompanyController : Controller
     {
-        DataBase DB = new DataBase();
+        DAL _DAL = new DAL();
         SqlCommand sqlCmd = null;
         // GET: Copany
         public ActionResult Setup_Company()
@@ -122,28 +123,21 @@ namespace Final_Project.Controllers
             return CompanyList;
 
         }
-        DataTable ExecuteProcedure(string sAction, string sCompanyCode, string sComapnyName = "" , string sCellNum = "", string sAddres = "")
+        DataTable ExecuteProcedure(string sAction, string sCompanyCode, string sComapnyName = "", string sCellNum = "", string sAddres = "")
         {
-           
-            List<Company> studentlist = new List<Company>();
-            SqlConnection con = new SqlConnection(DB.DBConn);
-            con.Open();
-            DataTable dtData = new DataTable();
-            sqlCmd = new SqlCommand("sp_Company", con);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@p_CompanyCode", sCompanyCode);
-            sqlCmd.Parameters.AddWithValue("@p_CompanyName", sComapnyName);
-            sqlCmd.Parameters.AddWithValue("@p_Mobile_no", sCellNum);
-            sqlCmd.Parameters.AddWithValue("@p_Address", sAddres);
-            sqlCmd.Parameters.AddWithValue("@p_Maker", "");
-            sqlCmd.Parameters.AddWithValue("@ActionType", sAction);
 
-            SqlDataAdapter sqlSda = new SqlDataAdapter(sqlCmd);
-            sqlSda.Fill(dtData);
-            sqlCmd.ExecuteNonQuery();
-            con.Close();
-            
-            return dtData;
+            List<Company> studentlist = new List<Company>();
+      
+            string storedProcedureName = "sp_Company";
+            object[] parameterValues = new object[] { sAction, sCompanyCode,sComapnyName ,sCellNum , sAddres };
+
+            _DAL.OpenConnection();
+
+
+            _DAL.LoadSpParameters(storedProcedureName, parameterValues);
+            DataTable dt_data = _DAL.GetDataTable();
+
+            return dt_data;
         }
 
 

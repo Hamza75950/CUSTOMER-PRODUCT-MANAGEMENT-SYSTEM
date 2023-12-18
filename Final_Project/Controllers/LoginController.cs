@@ -3,10 +3,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.Mvc;
 using System.Web.Security;
-using Final_Project.DB;
 using Final_Project.Models;
-
-using DataAccessLayer;
+using Final_Project.DataBase;
 
 namespace Final_Project.Controllers
 {
