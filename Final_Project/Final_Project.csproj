@@ -2713,6 +2713,8 @@
     <Content Include="Views\Login\View.cshtml" />
     <Content Include="Views\Shared\Dashboard.cshtml" />
     <Content Include="Views\Bill_Gen\index.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Views\Company\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

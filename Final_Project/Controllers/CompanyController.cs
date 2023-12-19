@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Final_Project.DataBase;
+using System.Net;
 
 namespace Final_Project.Controllers
 {
@@ -35,28 +36,30 @@ namespace Final_Project.Controllers
 
         // POST: Copany/Create
         [HttpPost]
-        public ActionResult Create(string company_code = "")
-        {
+        public ActionResult Create(Company CMP)
+            {
+           
             try
             {
                 DataTable dtdata = null;
-                dtdata = ExecuteProcedure("FetchData", "", "", "");
-
-                return RedirectToAction("Company");
+                dtdata = ExecuteProcedure("Submit",CMP.Company_Code, CMP.Company_Name, CMP.Company_Contact, CMP.Company_Address);
+                return RedirectToAction("Setup_Company");
             }
-            catch
+            catch (Exception ex)
             {
                 return View();
             }
         }
 
         // GET: Copany/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
 
-
-
-            return View();
+            return View(Companies().Find(smodel => smodel.Company_Code == id)) ;
         }
 
         // POST: Copany/Edit/5
@@ -125,11 +128,8 @@ namespace Final_Project.Controllers
         }
         DataTable ExecuteProcedure(string sAction, string sCompanyCode, string sComapnyName = "", string sCellNum = "", string sAddres = "")
         {
-
-            List<Company> studentlist = new List<Company>();
-      
             string storedProcedureName = "sp_Company";
-            object[] parameterValues = new object[] { sAction, sCompanyCode,sComapnyName ,sCellNum , sAddres };
+            object[] parameterValues = new object[] {  sCompanyCode,sComapnyName ,sCellNum , sAddres, Session["Users_id"].ToString(), sAction };
 
             _DAL.OpenConnection();
 

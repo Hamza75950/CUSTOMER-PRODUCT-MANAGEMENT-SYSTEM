@@ -27,26 +27,31 @@
             <th>
                 @Html.DisplayNameFor(model => model.Company_Address)
             </th>
-
+            <th>
+                Action
+            </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Company_Code)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Company_Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Company_Contact)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Company_Address)
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company_Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.Company_Code}) 
+            </td>
+        </tr>
         }
     </tbody>
 

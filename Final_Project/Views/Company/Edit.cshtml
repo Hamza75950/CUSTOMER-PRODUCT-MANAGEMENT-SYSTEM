@@ -1,26 +1,23 @@
 ﻿﻿@model Final_Project.Models.Company
 @{
-    ViewBag.Title = "Company Setup";
+    ViewBag.Title = "Update Company";
+
 }
 
-<h2>Company Setup</h2>
-<br />
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
 <form class="row g-3">
     <div class="col-12">
-        <button class="btn btn-outline-dark" type="submit">Submit</button>
+        <button class="btn btn-outline-dark" type="submit">Update</button>
         <a class="btn btn-outline-dark" @Html.ActionLink("Return", "SETUP_COMPANY")
     </div>
     <br />
-
     <div class="col-md-5">
         <label for="floatingInput" class="form-label">Company Code</label>
         @*<input type="text" class="form-control" id="floatingInput" required>*@
-        @Html.EditorFor(model => model.Company_Code, new { htmlAttributes = new { @class = "form-control",  placeholder = "Enter Company Code"} })
+        @Html.EditorFor(model => model.Company_Code, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Company Code" } })
         @*@Html.TextBox("Company_Code", "", new { @class = "form-control", placeholder = "Enter Company Code" })*@
     </div>
     <div class="col-md-5">
@@ -45,7 +42,6 @@
 
     <br />
 
-
-
 </form>
 }
+
