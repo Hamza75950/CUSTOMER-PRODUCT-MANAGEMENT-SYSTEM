@@ -73,10 +73,8 @@
                                     <div class="fw-semibold">Account</div>
                                 </div>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-                                    <svg class="icon me-2">
-                                        <use xlink:href="~/Content/dist/vendors/coreui/icons/svg/free.svg#cil-account-logout"></use>
-                                    </svg> Logout
-                                </a>
+  <a class="nav-link" @Html.ActionLink("Log Out", "Index", "Login")
+</a>
                             </div>
                         </li>
                     </ul>
