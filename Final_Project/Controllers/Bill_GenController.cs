@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final_Project.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,12 +9,23 @@ namespace Final_Project.Controllers
 {
     public class Bill_GenController : Controller
     {
-        // GET: Bill_Gen
+     
         public ActionResult Index()
         {
             return View();
         }
+        public ActionResult YourAction()
+        {
+            List<Final_Project.Models.Bill_Payment> model = Billpayment();
 
+    // Check if model is null and provide an empty list if needed
+            if (model == null)
+            {
+                model = new List<Final_Project.Models.Bill_Payment>();
+            }
+
+            return View(model);
+        }
         // GET: Bill_Gen/Details/5
         public ActionResult Details(int id)
         {
@@ -84,6 +96,14 @@ namespace Final_Project.Controllers
             {
                 return View();
             }
+        }
+        public List<Bill_Payment> Billpayment()
+        {
+            List<Bill_Payment> BillList = new List<Bill_Payment>();
+
+         
+            return BillList;
+
         }
     }
 }

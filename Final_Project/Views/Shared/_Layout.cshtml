@@ -9,6 +9,8 @@
         <link href="~/Content/dist/css/style.css" rel="stylesheet" />
         <link href="~/Content/dist/css/examples.css" rel="stylesheet" />
         <link href="~/Content/dist/vendors/coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet" />
+        <link href="~/Content/Loader.css" rel="stylesheet" />
+
     </head>
     <body>
        
@@ -60,7 +62,7 @@
                             <use xlink:href="~/Content/dist/assets/brand/coreui.svg#full"></use>
                         </svg>
                     </a>
-                   
+
                     <ul class="header-nav ms-3">
                         <li class="nav-item dropdown">
                             <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -73,23 +75,14 @@
                                     <div class="fw-semibold">Account</div>
                                 </div>
                                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-  <a class="nav-link" @Html.ActionLink("Log Out", "Index", "Login")
+                                    <a class="nav-link" @Html.ActionLink("Log Out", "Index", "Login")
 </a>
                             </div>
                         </li>
                     </ul>
                 </div>
-                @*<div class="header-divider"></div>*@
-                @*<div class="container-fluid">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb my-0 ms-2">
-                            <li class="breadcrumb-item">
-                                 if breadcrumb is single<span>Home</span>
-                            </li>
-                            <li class="breadcrumb-item active"><span>Dashboard1</span></li>
-                        </ol>
-                    </nav>
-                </div>*@
+               
+
             </header>
             <div class="body flex-grow-1 px-3">
                 <div class="container-lg">

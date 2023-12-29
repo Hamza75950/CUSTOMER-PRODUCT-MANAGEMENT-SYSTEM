@@ -1,8 +1,180 @@
-﻿
+﻿@model List<Final_Project.Models.Bill_Payment>
 @{
     ViewBag.Title = "Bill Payment";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>index</h2>
+    ;
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<form class="row g-2">
+    <div class="col-12">
+        <button class="btn btn-outline-dark" type="submit">Submit</button>
+        <a class="btn btn-outline-dark" @Html.ActionLink("Return", "SETUP_COMPANY")
+    </div>
+    <br />
+
+    @*<div class="col-md-5">*@
+    <div clas="row g-2">
+        <div class="col-12">
+            <label for="floatingInput" class="form-label">Delvery Date</label>
+
+            @Html.EditorFor(model => model[0].Date, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Deliver Date" } })
+            <label for="floatingInput" class="form-label">Delivery Challan Number</label>
+
+            @Html.EditorFor(model => model[0].Del_Challan, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Delivery Challan Number" } })
+        </div>
+    </div>
+    @*</div>*@
+
+    <div class="col-md-5">
+        <label for="floatingInput" class="form-label">Company Name</label>
+
+        @Html.DropDownListFor(model => model[0].Company_Name, new SelectList(new List<SelectListItem> {
+             new SelectListItem { Text = "Yes", Value = "1"},
+             new SelectListItem { Text = "No", Value = "0"}
+         }, "Value", "Text"),
+ "Select Company", new { @class = "form-select" })
+
+    </div>
+    <div class="col-md-5">
+        <label for="floatingInput" class="form-label">Fabric Rolls</label>
+
+        @Html.EditorFor(model => model[0].Rolls, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Rolls" } })
+
+    </div>
+    <div class="col-md-5">
+        <label for="floatingInput" class="form-label">Fabric Weight</label>
+
+        @Html.EditorFor(model => model[0].weight, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Weight" } })
+
+    </div>
+    <div class="col-md-5">
+        <label for="floatingInput" class="form-label">Fabric Colour</label>
+
+        @Html.EditorFor(model => model[0].Colour, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Colour" } })
+
+    </div>
+    <div class="col-md-5">
+        <label for="floatingInput" class="form-label">Fabrics</label>
+
+        @Html.DropDownListFor(model => model[0].Fabric, new SelectList(new List<SelectListItem> {
+             new SelectListItem { Text = "Yes", Value = "1"},
+             new SelectListItem { Text = "No", Value = "0"}
+         }, "Value", "Text"),
+ "Select Fabrics", new { @class = "form-select" })
+
+    </div>
+    <div class="col-md-5">
+        <label for="floatingInput" class="form-label">Fabric Rate</label>
+
+        @Html.EditorFor(model => model[0].Fab_Rate, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Rate" } })
+
+    </div>
+    <br />
+    @if (Model != null && Model.Count > 0)
+    {
+        <table class="table table-striped table-hover">
+            <thead class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Date)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Del_Challan)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Fabric)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Rolls)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].weight)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Fab_Rate)
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Del_Challan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fabric)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rolls)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.weight)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fab_Rate)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Del_Challan })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <table class="table table-striped">
+        <tbody>
+            <tr runat="server" id="trAccStatClosingBal">
+                <th scope="row" style="width: 50%;">
+                    Closing Balance as on
+                    <asp:Label ID="lblclosebaldt" runat="server" Text="" />
+                </th>
+                <td style="width: 50%;">
+                    <asp:Label ID="lblclosebal" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
+            <tr runat="server" id="trAccStatAvailBal">
+                <th scope="row" style="width: 50%;">
+                    Available Balance as on
+                    <asp:Label ID="lblavailablebaldt" runat="server" Text="" />
+                </th>
+                <td style="width: 50%;">
+                    <asp:Label ID="lblavailablebal" runat="server" Text=""></asp:Label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row" id="DivExport" runat="server" visible="false">
+        <div class="col-md-12 text-center">
+            <div class="wrapper text-center">
+                <div class="btn-group-sm">
+                    <asp:DropDownList ID="ddlFormat" runat="server" CssClass="btn btn-default" Width="200px" required>
+                        <asp:ListItem Value="">Select</asp:ListItem>
+                        <asp:ListItem Value="Excel">Excel Format</asp:ListItem>
+                        <asp:ListItem Value="PDF">PDF Format</asp:ListItem>
+                        <asp:ListItem Value="MT940">MT 940 Format</asp:ListItem>
+                    </asp:DropDownList>
+                    <asp:Button ID="btnExpo" class="btn btn-default" runat="server" Text="Export" OnClick="btnExpo_Click" Visible="false" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</form>
+}
 
