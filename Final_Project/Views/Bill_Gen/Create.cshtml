@@ -1,0 +1,87 @@
+﻿@model List<Final_Project.Models.Bill_Payment>
+
+@{
+    ViewBag.Title = "Create Bill";
+}
+
+<h2>View</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Bill_Payment</h4>
+        <hr />
+        <div style="display: flex; gap: 10px;">
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Delvery Date</label>
+
+                @Html.EditorFor(model => model[0].Date, new { htmlAttributes = new { @class = "form-control", id = "Date", placeholder = "Enter Deliver Date" } })
+            </div>
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Delivery Challan Number</label>
+
+                @Html.EditorFor(model => model[0].Del_Challan, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Delivery Challan Number" } })
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Company Name</label>
+                @if (Model != null && Model.Any())
+                {
+                    @Html.DropDownListFor(model => model[0].Company_Name, new SelectList(Model, "company_code", "Company_Name "), "Select Company", new { @class = "form-select" })
+                }
+                else
+                {
+                    @Html.DropDownListFor(model => model[0].Company_Name, new SelectList(Model, "No Data Found"), "Select Company", new { @class = "form-select" })
+                }
+
+            </div>
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Fabric Rolls</label>
+
+                @Html.EditorFor(model => model[0].Rolls, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Rolls" } })
+
+            </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Fabric Weight</label>
+
+                @Html.EditorFor(model => model[0].weight, new { htmlAttributes = new { @class = "form-control", @id = "txtweight", placeholder = "Enter Fabric Weight" } })
+
+            </div>
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Fabric Colour</label>
+
+                @Html.EditorFor(model => model[0].Colour, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Colour" } })
+
+            </div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Fabrics</label>
+
+                @Html.EditorFor(model => model[0].fabric_name, new { htmlAttributes = new { @class = "form-control", placeholder = "Enter Fabric Name" } })
+
+            </div>
+            <div class="col-md-6">
+                <label for="floatingInput" class="form-label">Fabric Rate</label>
+
+                @Html.EditorFor(model => model[0].Fab_Rate, new { htmlAttributes = new { @class = "form-control", @id = "txtRate", placeholder = "Enter Fabric Rate" } })
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

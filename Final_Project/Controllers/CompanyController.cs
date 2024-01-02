@@ -1,4 +1,4 @@
-﻿using Final_Project.DB;
+﻿
 using Final_Project.Models;
 using System;
 using System.Collections.Generic;
@@ -66,18 +66,9 @@ namespace Final_Project.Controllers
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
-            try
-            {
-                string clickedRow = collection["clicked_row"];
-
-                ViewBag.ClickedRow = clickedRow;
-
-                return RedirectToAction("Create");
-            }
-            catch
-            {
+            
                 return View();
-            }
+            
         }
 
         // GET: Copany/Delete/5

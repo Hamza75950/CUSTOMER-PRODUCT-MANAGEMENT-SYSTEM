@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Final_Project.Models.GetProduct>
+
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+
+
+@if (TempData["InsertMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible">
+        <strong>Success!</strong> @TempData["InsertMessage"]
+    </div>
+}
+
+
+@if (TempData["UpdateMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible">
+        <strong>Success!</strong> @TempData["UpdateMessage"]
+    </div>
+}
+
+@if (TempData["DeleteMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible">
+        <strong>Success!</strong> @TempData["DeleteMessage"]
+    </div>
+}
+
+<p>
+    <a class="btn btn-outline-dark" @Html.ActionLink("Create New", "AddProduct")
+</p>
+<table class="table table-striped table-hover">
+    <thead class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fb_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fabric_name)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fb_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fabric_name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.fb_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.fb_ID })
+                </td>
+            </tr>
+        }
+        </tbody>
+</table>
